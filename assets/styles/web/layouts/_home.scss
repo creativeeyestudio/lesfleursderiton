@@ -88,6 +88,19 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            
+            img {
+                transform-origin: 50% 50%;
+                transition-duration: .75s;
+            }
+            
+            &:hover {
+                img {
+                    transform: scale(.8);
+                    opacity: .5;
+                }
+                
+            }
         }
     }
 }

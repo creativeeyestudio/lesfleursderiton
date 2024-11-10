@@ -17,5 +17,15 @@ footer{
         ul{
             margin: 0;
         }
+
+        span {
+            cursor: pointer;
+            text-decoration: underline;
+            transition-duration: .75s;
+            
+            &:hover {
+                opacity: .5;
+            }
+        }
     }
 }

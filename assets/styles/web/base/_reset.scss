@@ -22,8 +22,7 @@ img{
 }
 
 a {
-    &:not(.btn), 
-    &:not(.nav-link) {
+    &:not(.btn):not(.nav-link):not(.gm-link) {
         transition-duration: .75s;
         &:hover {
             opacity: .5;
