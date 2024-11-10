@@ -11,7 +11,7 @@ $headings: (h1, $fsTitle1), (h2, $fsTitle2), (h3, $fsTitle3), (h4, $fsTitle4), (
 
 @each $heading, $fontSize in $headings {
   #{$heading} {
-    @include font(400, $fontSize, true, $ff-body);
+    @include font(400, $fsTitle4, true, $ff-body);
     @media screen and (min-width: $md) {
       @include font(400, $fontSize, true, $ff-body);
     }
