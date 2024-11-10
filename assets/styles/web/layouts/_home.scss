@@ -4,7 +4,7 @@
     background: rgba($color: #000, $alpha: 1.0) url("../../../../public/uploads/images/pages/bg-home.jpg") center bottom 75%;
     background-size: cover;
     .content-home {
-        background-color: rgba($color: #000, $alpha: 0.8);
+        background-color: rgba($color: #000, $alpha: .9);
         color: white;
     }
     .text {
@@ -13,15 +13,12 @@
             font: 400 2em/1.5em $ff-title;
             span {
                 display: block;
-                &:not(:last-child){
-                    margin-bottom: .5rem;
-                }
             }
             .small {
                 font: 400 .5em/1.5em $ff-body;
             }
             .title{
-                margin: $marge-m 0;
+                margin: 1rem 0;
             }
             .subtitle {
                 font: 400 .7em/1.5em $ff-body;
@@ -59,7 +56,7 @@
             left: 0;
         }
         .content-home{
-            background: rgba($color: #000, $alpha: 0.5);
+            background: rgba($color: #000, $alpha: .8);
             z-index: 10;
         }
         .text{
@@ -91,6 +88,19 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            
+            img {
+                transform-origin: 50% 50%;
+                transition-duration: .75s;
+            }
+            
+            &:hover {
+                img {
+                    transform: scale(.8);
+                    opacity: .5;
+                }
+                
+            }
         }
     }
 }

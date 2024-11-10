@@ -73,13 +73,13 @@ function parallax() {
 var htmlContent = document.querySelector('html');
 
 document.querySelectorAll('.toggle-nav').forEach(btn => {
-  btn.addEventListener('click', function () {
+  btn.addEventListener('click', () => {
     htmlContent.classList.toggle('nav-open');
   });
 });
 
 document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function () {
+  link.addEventListener('click', () => {
     htmlContent.classList.remove('nav-open');
   });
 });
@@ -88,7 +88,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Smooth Scroll
 // -----------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
-  anchorLink().forEach(function (link) {
+  anchorLink().forEach(link => {
     link.addEventListener('click', function (e) {
       // Empêcher le comportement par défaut du lien
       e.preventDefault();

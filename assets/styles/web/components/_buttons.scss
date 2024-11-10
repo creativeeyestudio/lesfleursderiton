@@ -3,10 +3,18 @@ button, .btn{
     &:not(.nav-btn){
         cursor: pointer;
         padding: 1rem 2rem;
-        border: none;
-        border-radius: 2rem;
-        background-color: $color-s;
         color: black;
+        background-color: $color-s;
+        border: .0625rem solid $color-s;
+        border-radius: 2rem;
         font: 400 1em/1em $ff-body;
+        transition: background-color .5s ease, border .5s ease, border-radius .75s .5s ease;
+    }
+
+    &:hover {
+        color: $colorWt;
+        background-color: $color-d;
+        border: .0625rem solid $colorWt;
+        border-radius: 0;
     }
 }
