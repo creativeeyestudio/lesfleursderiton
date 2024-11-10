@@ -18,3 +18,10 @@ button, .btn{
         border-radius: 0;
     }
 }
+
+.tarteaucitronAllow {
+    transition-duration: .75s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}

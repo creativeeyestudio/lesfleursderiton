@@ -1,3 +1,14 @@
+form {
+    position: relative;
+}
+
+.tac_activate_recaptcha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .8) !important;
+}
+
 .form-input{
     text-align: left;
     margin-bottom: 1rem;
