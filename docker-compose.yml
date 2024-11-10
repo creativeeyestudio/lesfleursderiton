@@ -1,0 +1,39 @@
+name: 'les-fleurs-de-riton'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+    ports:
+      - "3307:3306"
+    volumes:
+      - lesfleursderiton-data:/var/lib/mysql
+      - ./docker/mysql:/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - local_net
+
+  web:
+    build: .
+    environment:
+      APP_ENV: dev
+      DATABASE_URL: mysql://user:password@db:3306/db?serverVersion=5.7&charset=utf8mb4
+    ports:
+      - 8011:80
+    volumes:
+      - .:/var/www   # Monte le code source local dans le conteneur
+    depends_on:
+      - db
+    networks:
+      - local_net
+
+volumes:
+  lesfleursderiton-data:
+
+networks:
+  local_net:
+    driver: bridge

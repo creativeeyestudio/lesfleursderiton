@@ -1,0 +1,46 @@
+<!-- Loader -->
+<div class="loader position-fixed wd-100 ht-100vh text-center">
+	<div class="content-anim">
+		{{ include('webpages/blocks/_loader.html.twig') }}
+	</div>
+</div>
+
+<!-- En-tête -->
+<header id="header" class="position-fixed">
+	<button aria-label="Menu de navigation" class="nav-btn toggle-nav">
+		<i class="bar bar-1"></i>
+		<i class="bar bar-2"></i>
+		<i class="bar bar-3"></i>
+		<i class="close-bar"></i>
+	</button>
+	<figure class="logotype">
+		<a href="/fr" data-no-swup>
+			<img alt="Les Fleurs de Riton" class="logo-text" src="../uploads/images/pages/logo-text.png" />
+		</a>
+	</figure>
+	<span class="contact-btn">
+		<a class="btn" href="#contact">Nous contacter</a>
+	</span>
+</header>
+
+<!-- Menu Desktop -->
+<nav id="nav" class="navsite position-fixed">
+	<ul class="ht-100 padding-none margin-none">
+		{{ include('webpages/blocks/_navigation.html.twig', {pos: 0}) }}
+	</ul>
+</nav>
+
+<!-- Menu mobile -->
+<nav class="mobile-nav position-fixed wd-100">
+	<button class="nav-btn toggle-nav">
+		<i class="bar bar-1"></i>
+		<i class="bar bar-2"></i>
+		<i class="bar bar-3"></i>
+		<i class="close-bar"></i>
+	</button>
+	<span>
+		<a href="#contact">
+			Nous contacter
+		</a>
+	</span>
+</nav>
